@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firewall Configuration</title>
+</head>
+<body>
+    <h1>Firewall Configuration</h1>
+    <form method="post">
+        <label for="ip_input">Enter IP addresses:</label><br>
+        <textarea id="ip_input" name="ip_input" rows="4" cols="50"></textarea><br>
+        <label for="object_list_name">Object List Name:</label><br>
+        <input type="text" id="object_list_name" name="object_list_name"><br>
+        <label for="group_name">Group Name:</label><br>
+        <input type="text" id="group_name" name="group_name"><br>
+        <label for="add_to_existing_group">Add to existing group?</label>
+        <input type="radio" id="yes" name="add_to_existing_group" value="yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="add_to_existing_group" value="no" checked>
+        <label for="no">No</label><br>
+        <label for="existing_group">Existing Group Name (if applicable):</label><br>
+        <input type="text" id="existing_group" name="existing_group"><br>
+        <label for="new_group_name">New Group Name (if not adding to existing group):</label><br>
+        <input type="text" id="new_group_name" name="new_group_name"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

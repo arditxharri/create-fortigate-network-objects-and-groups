@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firewall Configuration Result</title>
+</head>
+<body>
+    <h1>Firewall Configuration Result</h1>
+    <p>Please go into: <strong>"config firewall address"</strong> mode</p>
+    <pre>
+        {% for line in config %}
+            {{ line }}
+        {% endfor %}
+    </pre>
+</body>
+</html>
