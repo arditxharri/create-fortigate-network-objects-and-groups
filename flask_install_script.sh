@@ -61,6 +61,15 @@ else
     pip install --upgrade Flask
 fi
 
+# Install or upgrade pandas
+if ! $(command -v pip) show pandas &> /dev/null; then
+    echo "pandas not found. Installing..."
+    pip install pandas
+else
+    echo "pandas already installed. Checking for upgrades..."
+    pip install --upgrade pandas
+fi
+
 # Create directory structure
 echo "Creating directory structure..."
 mkdir -p myflaskapp/static myflaskapp/templates
