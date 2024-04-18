@@ -7,7 +7,9 @@
 </head>
 <body>
     <h1>Firewall Configuration</h1>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
+        <label for="file">Upload File:</label><br>
+        <input type="file" id="file" name="file"><br>
         <label for="ip_input">Enter IP addresses:</label><br>
         <textarea id="ip_input" name="ip_input" rows="4" cols="50"></textarea><br>
         <label for="object_list_name">Object List Name:</label><br>
@@ -25,5 +27,14 @@
         <input type="text" id="new_group_name" name="new_group_name"><br>
         <input type="submit" value="Submit">
     </form>
+    <!-- Add Python code snippet here -->
+    {% if ip_list %}
+        <p>IP Addresses:</p>
+        <ul>
+            {% for ip in ip_list %}
+                <li>{{ ip }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 </body>
 </html>

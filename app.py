@@ -45,6 +45,14 @@ def create_firewall_config(ip_list, object_list_name, group_name, add_to_existin
     
     return firewall_config
 
+def extract_ips_from_dataframe(df):
+    ip_list = []
+    for column in df.columns:
+        for cell in df[column]:
+            if isinstance(cell, str):
+                ip_list.extend(re.findall(r'\b(?:\d{1,3}\.){3}\d{1,3}\b', cell))
+    return ip_list
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
@@ -60,7 +68,7 @@ def index():
             elif uploaded_file.filename.endswith(('.xls', '.xlsx')):
                 # Read IP addresses from Excel file using pandas
                 df = pd.read_excel(uploaded_file)
-                ip_list = df['IP Address'].dropna().tolist()
+                ip_list = extract_ips_from_dataframe(df)
         else:
             ip_list = []
 
