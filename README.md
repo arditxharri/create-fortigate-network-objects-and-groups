@@ -1,14 +1,3 @@
-This simple script is used to create network object and add them to a group in FortiGate cli. It generates the commands necessary for you. 
-This is useful if u want to create multiple IP's and add them to the same object group (or network obejct group).
-This app uses Python3 and Flask.
-
-
-To use this app:
-1.	Cd in the directory: `cd create-fortigate-network-objects-and-groups`
-2.	`chmod +x flask_install_script.sh`
-3.	Run the script: `/. flask_install_script.sh`
-4.	After the script finishes run: `python3 app.py` *(note that you must be in the directory: **create-fortigate-network-objects-and-groups** to run it).*
-
 # Create FortiGate Network Objects and Groups
 
 This Python Flask application simplifies the creation of network objects and their inclusion in groups for FortiGate firewalls. Designed for ease of use, it provides a straightforward interface for generating the necessary commands to configure multiple IP addresses within a single object group or network object group.
@@ -24,11 +13,10 @@ This Python Flask application simplifies the creation of network objects and the
 
 ## Usage:
 
-1. Clone the repository.
-2. Run the provided installation script to set up the Flask environment and install the required packages.
-3. Launch the application with Python3.
-4. Input IP addresses through file upload or manual entry, customize configuration options, and generate CLI commands.
-5. Copy the generated commands and apply them to your FortiGate firewall for seamless network configuration.
+1.	Cd in the directory: `cd create-fortigate-network-objects-and-groups`
+2.	`chmod +x flask_install_script.sh`
+3.	Run the script: `/. flask_install_script.sh`
+4.	After the script finishes run: `python3 app.py` *(note that you must be in the directory: **create-fortigate-network-objects-and-groups** to run it).*
 
 ## Requirements:
 
