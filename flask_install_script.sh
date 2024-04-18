@@ -70,6 +70,10 @@ else
     pip install --upgrade pandas
 fi
 
+# Install openpyxl
+echo "Installing openpyxl..."
+pip install openpyxl
+
 # Create directory structure
 echo "Creating directory structure..."
 mkdir -p myflaskapp/static myflaskapp/templates
