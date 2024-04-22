@@ -18,9 +18,10 @@ This Python Flask application simplifies the creation of network objects and the
 3.	`python3 -m venv myenv`
 4.	`source myenv/bin/activate`
 5.	Run the script: `./flask_install_script.sh`
-6.	`sudo systemctl stop firewalld`
-7.	After the script finishes run: `python3 app.py` *(note that you must be in the directory: **create-fortigate-network-objects-and-groups** to run it).*
-8.	Access you web app your computer IP on port 5000( Ex: if you pc'c IP is **192.168.1.10** you can access it at **http://192.168.1.10:5000**)
+6.	`sudo firewall-cmd --zone=public --add-port=5000/tcp --permanent`
+7.	`sudo firewall-cmd --reload`
+8.	After the script finishes run: `python3 app.py` *(note that you must be in the directory: **create-fortigate-network-objects-and-groups** to run it).*
+9.	Access you web app your computer IP on port 5000( Ex: if you pc'c IP is **192.168.1.10** you can access it at **http://192.168.1.10:5000**)
 
 ## Requirements:
 
