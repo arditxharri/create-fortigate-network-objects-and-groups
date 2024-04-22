@@ -13,15 +13,16 @@ This Python Flask application simplifies the creation of network objects and the
 
 ## Usage:
 
-1.	Cd in the directory: `cd create-fortigate-network-objects-and-groups`
-2.	`chmod +x flask_install_script.sh`
-3.	`python3 -m venv myenv`
-4.	`source myenv/bin/activate`
-5.	Run the script: `./flask_install_script.sh`
-6.	`sudo firewall-cmd --zone=public --add-port=5000/tcp --permanent`
-7.	`sudo firewall-cmd --reload`
-8.	After the script finishes run: `python3 app.py` *(note that you must be in the directory: **create-fortigate-network-objects-and-groups** to run it).*
-9.	Access you web app your computer IP on port 5000( Ex: if you pc'c IP is **192.168.1.10** you can access it at **http://192.168.1.10:5000**)
+1. Clone this repo: `git clone https://github.com/arditxharri/create-fortigate-network-objects-and-groups.git`
+2.	Cd in the directory: `cd create-fortigate-network-objects-and-groups`
+3.	`chmod +x flask_install_script.sh`
+4.	`python3 -m venv myenv`
+5.	`source myenv/bin/activate`
+6.	Run the script: `./flask_install_script.sh`
+7.	`sudo firewall-cmd --zone=public --add-port=5000/tcp --permanent`
+8.	`sudo firewall-cmd --reload`
+9.	After the script finishes run: `python3 app.py` *(note that you must be in the directory: **create-fortigate-network-objects-and-groups** to run it).*
+10.	Access you web app your computer IP on port 5000( Ex: if you pc'c IP is **192.168.1.10** you can access it at **http://192.168.1.10:5000**)
 
 ## Requirements:
 
